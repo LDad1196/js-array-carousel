@@ -11,16 +11,32 @@ h1 {
 
 .container {
     margin: 0 auto;
-    width: 50%;
+    width: 40%;
     text-align: center;
 }
-
 .slides {
     width: 100%;
     display: none;
-    object-fit: contain;
+    object-fit: fill;
+    aspect-ratio: 1;
+    
+    
 }
 
 .active {
     display: block;
+}
+
+.btnNext,
+.btnPrev {
+    position: absolute;
+    top: 25rem;
+}
+
+.btnNext {
+    right: 25rem;
+}
+
+.btnPrev {
+    left: 25rem;
 }
