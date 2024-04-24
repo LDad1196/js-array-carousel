@@ -4,20 +4,20 @@ let immagineProssima
 
 let slides = document.getElementsByClassName("slides")
 
-
-
+const btnNext = document.getElementById("next")
 // Determinare Eventi che accadono al click del bottone next
 
-document.getElementById("btnNext").addEventListener("click", function () {
+document.getElementById("next").addEventListener('click', function(){
     
     // Creare ciclo delle slide
     for (let i = 0; i < slides.length; i++) {
+        
         const slide = slides[i];
 
         // Scopriamo quale slide ha la classe .active
-        if (slides.classList.contains("active")) {
+        if ( slide.classList.contains("active") ) {
             // se si rimuovi la classe .active
-            slides.classList.remove("active")
+            slide.classList.remove("active")
             // prendiamo nota del numero della slide che contiene active
             immagineAttiva = i;     
         }
@@ -37,16 +37,19 @@ document.getElementById("btnNext").addEventListener("click", function () {
     console.log (`Sposto la selezione da ${immagineAttiva} a ${immagineProssima}`);
 });
 
-document.getElementById("btnPrev").addEventListener("click", function () {
+
+const btnPrev = document.getElementById("prev")
+
+btnPrev.addEventListener("click", function () {
     
     // Creare ciclo delle slide
     for (let i = 0; i < slides.length; i++) {
         const slide = slides[i];
 
         // Scopriamo quale slide ha la classe .active
-        if (slides.classList.contains("active")) {
+        if (slide.classList.contains("active")) {
             // se si rimuovi la classe .active
-            slides.classList.remove("active")
+            slide.classList.remove("active")
             // prendiamo nota del numero della slide che contiene active
             immagineAttiva = i;     
         }

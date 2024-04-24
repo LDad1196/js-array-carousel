@@ -19,24 +19,8 @@ h1 {
     display: none;
     object-fit: fill;
     aspect-ratio: 1;
-    
-    
 }
 
 .active {
     display: block;
-}
-
-.btnNext,
-.btnPrev {
-    position: absolute;
-    top: 25rem;
-}
-
-.btnNext {
-    right: 25rem;
-}
-
-.btnPrev {
-    left: 25rem;
 }
